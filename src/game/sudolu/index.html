@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sudoku</title>
-    <link rel="stylesheet" href="./sudoku.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./sudoku.css" />
+    <script src="./caculator.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Game sudoku</h1>
-        <a href="../../index.html">Return Home</a>
+      <h1>Game sudoku</h1>
+      <a href="../../index.html">Return Home</a>
     </header>
-    
+
     <article>
-        <aside id="asidelleft">
-            advertisement
-        </aside>
-        <section id="game"">
-            body
-        </section>
-        <aside id="asideright">
-            advertisement
-        </aside>
+      <aside id="asidelleft">
+        advertisement
+      </aside>
+      <section id="tableGame">
+        <div class="container">
+          <div id="gameHeader">
+            <button>introduction</button>
+            <button>Load Game</button>
+            <button>Save Game</button>
+          </div>
+          <div id="divslider">
+            <hr>
+            <input id="slider" name="slider" type="range" value=0 min=0 max="100">
+            <label for="slider">0</label>
+          </div>
+          <div id="gameBody"></div>
+          <hr>
+          <div id="gameFooter">
+            <button>Hint</button>
+            <button>Check</button>
+          </div>
+        </div>
+      </section>
+      <aside id="asideright">
+        advertisement
+      </aside>
     </article>
 
     <footer>
-        Design by Peter Facebook: <a href="https://www.facebook.com/behindpeter15ck/">Facebook</a> 
+      Design by Peter Facebook:
+      <a href="https://www.facebook.com/behindpeter15ck/">Facebook</a>
     </footer>
-</body>
+    <script>
+      genaratorTable();
+      addEventListenerSlider();
+      countDown();
+    </script>
+  </body>
 </html>
